@@ -29,7 +29,8 @@ class ViewController: UIViewController {
         
         btn2.layer.cornerRadius = 5.0
         btn2.clipsToBounds = true
-        btn2.layer.borderWidth = 0.3
+        
+        btn2.layer.borderWidth = 0.09
         btn2.layer.borderColor = UIColor.white.cgColor
 //
         
