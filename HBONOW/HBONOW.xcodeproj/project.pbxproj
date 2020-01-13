@@ -25,7 +25,7 @@
 		88072F2823C3B6E6007519E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88072F2B23C3B6E6007519E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88072F2D23C3B6E6007519E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,6 @@
 		88072F1223C3B6E3007519E2 = {
 			isa = PBXGroup;
 			children = (
-				88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */,
 				88072F1D23C3B6E3007519E2 /* HBONOW */,
 				88072F1C23C3B6E3007519E2 /* Products */,
 			);
@@ -59,6 +58,7 @@
 		88072F1D23C3B6E3007519E2 /* HBONOW */ = {
 			isa = PBXGroup;
 			children = (
+				88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */,
 				88072F1E23C3B6E3007519E2 /* AppDelegate.swift */,
 				88072F2023C3B6E3007519E2 /* ViewController.swift */,
 				88072F2223C3B6E3007519E2 /* Main.storyboard */,

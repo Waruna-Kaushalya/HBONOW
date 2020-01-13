@@ -80,6 +80,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="80t-le-znZ" kind="show" id="Z6g-oA-p40"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,11 +99,11 @@
             </objects>
             <point key="canvasLocation" x="442.39999999999998" y="-0.44977511244377816"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="mh0-8q-1rK">
             <objects>
-                <viewController id="80t-le-znZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YvC-cV-KKB">
+                <viewController id="80t-le-znZ" customClass="SecondViewController" customModule="HBONOW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YvC-cV-KKB" customClass="Se">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -238,7 +241,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coc-hj-tON">
                                 <rect key="frame" x="15" y="555" width="343" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.001341641648" green="0.57949525120000001" blue="0.99237769840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.43249678938356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Register For HBO NOW">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -247,17 +250,19 @@
                                     <action selector="registerBTN:" destination="EoI-sb-o5l" eventType="touchUpInside" id="7IZ-3e-v0X"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ABC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-eE-idK">
-                                <rect key="frame" x="38" y="25" width="34" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KOX-C7-KKL"/>
                     </view>
+                    <connections>
+                        <outlet property="LNametxt" destination="Lc4-Ib-0LB" id="RM4-lA-NGb"/>
+                        <outlet property="cPasswordTxt" destination="UcG-Eo-niK" id="FPo-LJ-dIq"/>
+                        <outlet property="emailAddTxt" destination="pAv-ct-gxF" id="xNS-cP-oet"/>
+                        <outlet property="fNameTxt" destination="drm-W2-kVX" id="eCY-Of-tBy"/>
+                        <outlet property="hboTxt" destination="coc-hj-tON" id="MGK-ww-Jyd"/>
+                        <outlet property="passwordTxt" destination="V4r-NU-KT6" id="gyl-5M-QGL"/>
+                        <outlet property="zipTxt" destination="mz8-Hh-MCC" id="i5y-VQ-LHE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49k-o0-Ieo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="EoI-sb-o5l" userLabel="Exit" sceneMemberID="exit"/>
