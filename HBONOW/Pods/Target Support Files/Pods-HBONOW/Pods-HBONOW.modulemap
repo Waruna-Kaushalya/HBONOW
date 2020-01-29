@@ -1,0 +1,6 @@
+framework module Pods_HBONOW {
+  umbrella header "Pods-HBONOW-umbrella.h"
+
+  export *
+  module * { export * }
+}
