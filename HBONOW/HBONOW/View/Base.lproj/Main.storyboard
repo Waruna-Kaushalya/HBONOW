@@ -139,15 +139,11 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7T-WA-ZzF">
                                 <rect key="frame" x="123.5" y="363" width="128" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="db2-O7-6SB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.033328846096992493" green="0.62208229303359985" blue="0.97135907411575317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo4-jT-hRL">
-                                <rect key="frame" x="123.5" y="329" width="128" height="20.5"/>
-                                <color key="tintColor" red="0.009512629533678707" green="0.0021444780661796603" blue="0.0023187715100068842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.94411897659301758" green="0.30952991070546909" blue="0.24344549070836341" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-iC-skE">
@@ -167,28 +163,42 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dxl-3G-Pwn">
+                                <rect key="frame" x="123" y="415" width="128" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo4-jT-hRL">
+                                <rect key="frame" x="37.5" y="334" width="300" height="20.5"/>
+                                <color key="tintColor" red="0.009512629533678707" green="0.0021444780661796603" blue="0.0023187715100068842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="CEG-gX-oJe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.94411897659301758" green="0.30952991070546909" blue="0.24344549070836341" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vo4-jT-hRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3eQ-VP-eh0"/>
                             <constraint firstItem="Tpx-AP-HAv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5xg-5k-Kts"/>
                             <constraint firstItem="rTy-vu-VKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Eeg-EA-lVf"/>
                             <constraint firstItem="hIc-i1-D0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="FwH-yO-OtO"/>
                             <constraint firstItem="ALh-DK-RMo" firstAttribute="top" secondItem="hIc-i1-D0F" secondAttribute="bottom" constant="27.5" id="H7K-wE-jjU"/>
-                            <constraint firstItem="vo4-jT-hRL" firstAttribute="top" secondItem="rTy-vu-VKw" secondAttribute="bottom" constant="20" id="JEX-V8-pbv"/>
                             <constraint firstItem="Tpx-AP-HAv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Moj-Uj-FqL"/>
-                            <constraint firstItem="P7T-WA-ZzF" firstAttribute="top" secondItem="vo4-jT-hRL" secondAttribute="bottom" constant="13.5" id="Olh-TC-E8M"/>
-                            <constraint firstItem="vo4-jT-hRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P25-Nf-5It"/>
                             <constraint firstItem="ALh-DK-RMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tr3-kb-fqN"/>
+                            <constraint firstItem="vo4-jT-hRL" firstAttribute="top" secondItem="rTy-vu-VKw" secondAttribute="bottom" constant="25" id="Tve-lP-4HJ"/>
                             <constraint firstItem="ALh-DK-RMo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="bf6-g9-g04"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MBb-iC-skE" secondAttribute="bottom" constant="56" id="cfT-TM-6sZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ALh-DK-RMo" secondAttribute="trailing" constant="10" id="d3V-gq-tpk"/>
-                            <constraint firstItem="P7T-WA-ZzF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fAy-wN-ZpQ"/>
                             <constraint firstItem="hIc-i1-D0F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzN-uA-yqo"/>
                             <constraint firstItem="rTy-vu-VKw" firstAttribute="top" secondItem="ALh-DK-RMo" secondAttribute="bottom" constant="8" id="pnk-N9-UwZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rTy-vu-VKw" secondAttribute="trailing" constant="10" id="saA-Ir-64d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hIc-i1-D0F" secondAttribute="trailing" constant="36" id="sol-FQ-d1h"/>
                             <constraint firstItem="hIc-i1-D0F" firstAttribute="top" secondItem="Tpx-AP-HAv" secondAttribute="bottom" constant="8" id="x3x-Zj-S2v"/>
                             <constraint firstItem="MBb-iC-skE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yXc-6A-TBg"/>
+                            <constraint firstItem="P7T-WA-ZzF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ya8-fh-xL8"/>
+                            <constraint firstItem="P7T-WA-ZzF" firstAttribute="top" secondItem="vo4-jT-hRL" secondAttribute="bottom" constant="8.5" id="z82-bc-86o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -202,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="527"/>
+            <point key="canvasLocation" x="1124" y="526.6866566716642"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="mh0-8q-1rK">

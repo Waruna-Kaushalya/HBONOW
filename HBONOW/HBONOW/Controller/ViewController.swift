@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  HBONOW
 //
 //  Created by Waruna Kaushalya on 1/7/20.
@@ -38,36 +38,49 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var errorLabel: UILabel!
     
+    
     @IBAction func loginButton(_ sender: Any) {
+        
+        
+//      checkPasswordAndEmail()
+        
+        
         context = LAContext()
-        
         context.localizedCancelTitle = "Enter Username/Password"
-        
+
         // First check if we have the needed hardware support.
-        var error: NSError?
-        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-            
-            let reason = "Log in to your account"
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
+        if passwordTextField.text != "" || emailTextField.text != ""{
+             self.checkPasswordAndEmail()
+        }else{
+            var error: NSError?
+            if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
                 
-                if success {
-                    self.transitionToHome()
+                let reason = "Log in to your account"
+                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
                     
-                    
-                } else {
-                    print(error?.localizedDescription ?? "Failed to authenticate")
-                    
-                    // Fall back to a asking for username and password.
-                    // ...
+                    if success {
+                        self.transitionToHome()
+                        
+                        
+                    } else {
+                        print(error?.localizedDescription ?? "Failed to authenticate")
+                        
+                        // Fall back to a asking for username and password.
+                        // ...
+                        self.checkPasswordAndEmail()
+                    }
                 }
+            } else {
+                print(error?.localizedDescription ?? "Can't evaluate policy")
+                
+                // Fall back to a asking for username and password.
+                // ...
+                checkPasswordAndEmail()
             }
-        } else {
-            print(error?.localizedDescription ?? "Can't evaluate policy")
-            
-            // Fall back to a asking for username and password.
-            // ...
+        
         }
-        //        }
+        
+     
         
     }
     
@@ -86,6 +99,19 @@ class ViewController: UIViewController {
         view.window?.rootViewController = homeViewController
         
         view.window?.makeKeyAndVisible()
+    }
+    func checkPasswordAndEmail(){
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespaces)
+        let pasword = passwordTextField.text!.trimmingCharacters(in: .whitespaces)
+        
+        Auth.auth().signIn(withEmail: email, password: pasword) { (result, error) in
+            if error != nil {
+                self.errorLabel.text =   error!.localizedDescription
+                self.errorLabel.alpha = 1
+            }else{
+                self.transitionToHome()
+            }
+        }
     }
 }
 

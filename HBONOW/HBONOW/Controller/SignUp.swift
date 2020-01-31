@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  SignUpViewController
 //  HBONOW
 //
 //  Created by Waruna Kaushalya on 1/13/20.
