@@ -14,7 +14,7 @@ import FirebaseFirestore
 import LocalAuthentication
 //login
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -27,39 +27,14 @@ class ViewController: UIViewController {
     enum AuthenticationState {
         case loggedin, loggedout
     }
-
+    
     
     override func viewDidLoad() {
-        
-        emailTextField.layer.cornerRadius = 9.0
-        emailTextField.clipsToBounds = true
-        emailTextField.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-        
-        passwordTextField.layer.cornerRadius = 9.0
-        passwordTextField.clipsToBounds  = true
-        passwordTextField.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
-        
-        signInButton.layer.cornerRadius = 5.0
-        signInButton.clipsToBounds = true
-        
-        btn2.layer.cornerRadius = 5.0
-        btn2.clipsToBounds = true
-        
-        btn2.layer.borderWidth = 0.09
-        btn2.layer.borderColor = UIColor.white.cgColor
-//
-        
-            //[UIColor.white].CGColor;
-        
-        
-
-        
-        
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpElements()
-         context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
+        context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil)
     }
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -77,7 +52,7 @@ class ViewController: UIViewController {
                 
                 if success {
                     self.transitionToHome()
-                   
+                    
                     
                 } else {
                     print(error?.localizedDescription ?? "Failed to authenticate")
@@ -98,6 +73,11 @@ class ViewController: UIViewController {
     
     func setUpElements() {
         errorLabel.alpha = 0
+        
+        TextFieldUtilities.TextFieldRadius_MaxX_MinY_MaxX_MaxY(passwordTextField)
+        TextFieldUtilities.TextFieldRadius_MinX_MinY_MaxX_MinY(emailTextField)
+        ButtonUtilities.ButtonRadius_All(signInButton)
+        
     }
     func transitionToHome()  {
         let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController

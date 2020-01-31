@@ -20,9 +20,9 @@ class FirstHomeViewController: UIViewController {
         setUpElements()
     }
     
-    func setUpElements() {
-        
-    }
+//    func setUpElements() {
+//        
+//    }
     /*
     // MARK: - Navigation
 
@@ -32,5 +32,14 @@ class FirstHomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func setUpElements() {
+        
+        ButtonUtilities.styleButton(signUpButton)
+        ButtonUtilities.ButtonRadius_MinX_MinY_MaxX_MinY(signUpButton)
+        
+        ButtonUtilities.styleButton(loginButton)
+        ButtonUtilities.ButtonRadius_MaxX_MinY_MaxX_MaxY(loginButton)
+
+    }
 
 }

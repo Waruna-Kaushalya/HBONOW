@@ -17,9 +17,9 @@
 		9AE2FCEC34C528DB3903C1EB /* Pods_HBONOW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384272D1A994E0C671275A59 /* Pods_HBONOW.framework */; };
 		C0030E2F23E15635005DDEBD /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E2E23E15635005DDEBD /* VideoCell.swift */; };
 		C0030E3123E15AA6005DDEBD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3023E15AA6005DDEBD /* Video.swift */; };
+		C0030E3323E3CEBD005DDEBD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3223E3CEBD005DDEBD /* Utilities.swift */; };
 		C009BC0C23DF032F00E190B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C009BC0B23DF032F00E190B1 /* Constants.swift */; };
 		C0E190A023DE86D20020AAF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */; };
-		C0E190A223DE9AAF0020AAF1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E190A123DE9AAF0020AAF1 /* Utilities.swift */; };
 		C0E190A423DEA52F0020AAF1 /* FirstHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */; };
 		C0E190A623DEB3BA0020AAF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0E190A523DEB3BA0020AAF1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -38,9 +38,9 @@
 		88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C0030E2E23E15635005DDEBD /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		C0030E3023E15AA6005DDEBD /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		C0030E3223E3CEBD005DDEBD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../../../../../Downloads/CustomLoginDemo/CustomLoginDemo/Helpers/Utilities.swift; sourceTree = "<group>"; };
 		C009BC0B23DF032F00E190B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C0E190A123DE9AAF0020AAF1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstHomeViewController.swift; sourceTree = "<group>"; };
 		C0E190A523DEB3BA0020AAF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E67EB183D6CF544D3B07A7A8 /* Pods-HBONOW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBONOW.release.xcconfig"; path = "Target Support Files/Pods-HBONOW/Pods-HBONOW.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 				C0E1909823DD6BE50020AAF1 /* Controller */,
 				88072F2D23C3B6E6007519E2 /* Info.plist */,
 				C0E190A523DEB3BA0020AAF1 /* GoogleService-Info.plist */,
+				C0030E3223E3CEBD005DDEBD /* Utilities.swift */,
 				88072F2523C3B6E3007519E2 /* HBONOW.xcdatamodeld */,
-				C0E190A123DE9AAF0020AAF1 /* Utilities.swift */,
 			);
 			path = HBONOW;
 			sourceTree = "<group>";
@@ -95,7 +95,6 @@
 			children = (
 				88072F2A23C3B6E6007519E2 /* LaunchScreen.storyboard */,
 				88072F2223C3B6E3007519E2 /* Main.storyboard */,
-				C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */,
 				88072F2823C3B6E6007519E2 /* Assets.xcassets */,
 			);
 			path = View;
@@ -107,6 +106,7 @@
 				88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */,
 				C009BC0B23DF032F00E190B1 /* Constants.swift */,
 				88072F1E23C3B6E3007519E2 /* AppDelegate.swift */,
+				C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */,
 				C0030E2E23E15635005DDEBD /* VideoCell.swift */,
 				88072F2023C3B6E3007519E2 /* ViewController.swift */,
 				C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */,
@@ -255,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0E190A223DE9AAF0020AAF1 /* Utilities.swift in Sources */,
 				88D9EE1223CC5F4800CB2530 /* SecondViewController.swift in Sources */,
 				88072F2123C3B6E3007519E2 /* ViewController.swift in Sources */,
 				C0E190A423DEA52F0020AAF1 /* FirstHomeViewController.swift in Sources */,
@@ -264,6 +263,7 @@
 				C0E190A023DE86D20020AAF1 /* HomeViewController.swift in Sources */,
 				88072F2723C3B6E3007519E2 /* HBONOW.xcdatamodeld in Sources */,
 				C009BC0C23DF032F00E190B1 /* Constants.swift in Sources */,
+				C0030E3323E3CEBD005DDEBD /* Utilities.swift in Sources */,
 				C0030E3123E15AA6005DDEBD /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

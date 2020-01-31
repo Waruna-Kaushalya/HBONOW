@@ -11,8 +11,8 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 //signUp
-class SecondViewController: UIViewController {
-
+class SignUpViewController: UIViewController {
+    
     @IBOutlet weak var fNameTxt: UITextField!
     @IBOutlet weak var LNametxt: UITextField!
     @IBOutlet weak var emailAddTxt: UITextField!
@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
         
         LNametxt.layer.cornerRadius = 9.0
         LNametxt.clipsToBounds = true
-         LNametxt.layer.maskedCorners = [.layerMaxXMinYCorner]
+        LNametxt.layer.maskedCorners = [.layerMaxXMinYCorner]
         
         emailAddTxt.layer.cornerRadius = 9.0
         emailAddTxt.clipsToBounds = true
@@ -55,51 +55,51 @@ class SecondViewController: UIViewController {
         
         
         
-    
+        
         super.viewDidLoad()
         setUpElements()
-
+        
         
     }
     func setUpElements() {
-      errorLabel.alpha = 0
+        errorLabel.alpha = 0
     }
     
     //check the fields and validate that the data is correct. If evrything is correct, this method return nil. othervise it returns the error messase.
     func validateFields() -> String? {
         
-    //check that all fields are field in
+        //check that all fields are field in
         if fNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || LNametxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailAddTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cPasswordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || zipTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  {
             
             
             
-             return "Please fill ll the fields"
+            return "Please fill ll the fields"
         }
         if passwordTxt.text != cPasswordTxt.text {
             return "Psword not mached"
         }
         
-       
+        
         
         //heck if the password is secure
         
         let cleanePassword = passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if Utilities.isPasswordValid(cleanePassword) == false {
+        if PasswordUtilities.isPasswordValid(cleanePassword) == false {
             //password secure enough
             return "Please make sure your password is at least 8 char, special chr and number"
         }
-       
-    
-    return nil
+        
+        
+        return nil
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
         let error = validateFields()
         
         if error != nil{
-                showError(error!)
-           
+            showError(error!)
+            
         }else{
             //create cleand version of user
             let firstName = fNameTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -114,7 +114,7 @@ class SecondViewController: UIViewController {
             
             let zip = zipTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-
+            
             
             //Create the user
             
@@ -137,7 +137,7 @@ class SecondViewController: UIViewController {
                     self.transitionToHome()
                     
                     
-                
+                    
                     
                 }
             }
