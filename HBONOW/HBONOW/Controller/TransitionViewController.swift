@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class TransitionViewController: UIViewController, UITextFieldDelegate  {
+class TransitionViewController: UIViewController  {
     
     func transitionToHome()  {
         let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
