@@ -13,7 +13,7 @@
 		88072F2723C3B6E3007519E2 /* HBONOW.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88072F2523C3B6E3007519E2 /* HBONOW.xcdatamodeld */; };
 		88072F2923C3B6E6007519E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88072F2823C3B6E6007519E2 /* Assets.xcassets */; };
 		88072F2C23C3B6E6007519E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88072F2A23C3B6E6007519E2 /* LaunchScreen.storyboard */; };
-		88D9EE1223CC5F4800CB2530 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */; };
+		88D9EE1223CC5F4800CB2530 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE1123CC5F4800CB2530 /* SignUp.swift */; };
 		9AE2FCEC34C528DB3903C1EB /* Pods_HBONOW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384272D1A994E0C671275A59 /* Pods_HBONOW.framework */; };
 		C0030E2F23E15635005DDEBD /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E2E23E15635005DDEBD /* VideoCell.swift */; };
 		C0030E3123E15AA6005DDEBD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3023E15AA6005DDEBD /* Video.swift */; };
@@ -35,7 +35,7 @@
 		88072F2823C3B6E6007519E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88072F2B23C3B6E6007519E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88072F2D23C3B6E6007519E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		88D9EE1123CC5F4800CB2530 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		C0030E2E23E15635005DDEBD /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		C0030E3023E15AA6005DDEBD /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C0030E3223E3CEBD005DDEBD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../../../../../Downloads/CustomLoginDemo/CustomLoginDemo/Helpers/Utilities.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		C0E1909823DD6BE50020AAF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				88D9EE1123CC5F4800CB2530 /* SecondViewController.swift */,
+				88D9EE1123CC5F4800CB2530 /* SignUp.swift */,
 				C009BC0B23DF032F00E190B1 /* Constants.swift */,
 				88072F1E23C3B6E3007519E2 /* AppDelegate.swift */,
 				C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */,
@@ -255,7 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88D9EE1223CC5F4800CB2530 /* SecondViewController.swift in Sources */,
+				88D9EE1223CC5F4800CB2530 /* SignUp.swift in Sources */,
 				88072F2123C3B6E3007519E2 /* ViewController.swift in Sources */,
 				C0E190A423DEA52F0020AAF1 /* FirstHomeViewController.swift in Sources */,
 				C0030E2F23E15635005DDEBD /* VideoCell.swift in Sources */,
