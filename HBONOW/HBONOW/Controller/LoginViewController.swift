@@ -13,7 +13,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import LocalAuthentication
 //login
-class ViewController: UIViewController {
+class LoginViewController:  TransitionViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         
         
-//      checkPasswordAndEmail()
+
         
         
         context = LAContext()
@@ -92,14 +92,7 @@ class ViewController: UIViewController {
         ButtonUtilities.ButtonRadius_All(signInButton)
         
     }
-    func transitionToHome()  {
-        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        
-        view.window?.rootViewController = homeViewController
-        
-        view.window?.makeKeyAndVisible()
-    }
+    
     func checkPasswordAndEmail(){
         let email = emailTextField.text!.trimmingCharacters(in: .whitespaces)
         let pasword = passwordTextField.text!.trimmingCharacters(in: .whitespaces)

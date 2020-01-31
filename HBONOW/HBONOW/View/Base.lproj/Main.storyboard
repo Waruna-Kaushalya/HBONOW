@@ -47,11 +47,23 @@
                                     <constraint firstAttribute="height" constant="70" id="dBn-lx-tHS"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QZr-qz-KRC">
+                                <rect key="frame" x="12" y="120" width="351" height="88"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HBO" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-Wz-75i">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="88"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="QZr-qz-KRC" firstAttribute="top" secondItem="bSW-3Y-mkc" secondAttribute="top" constant="100" id="YOn-ag-Vii"/>
+                            <constraint firstItem="QZr-qz-KRC" firstAttribute="centerX" secondItem="xh5-ZG-Wes" secondAttribute="centerX" id="agH-lu-mqG"/>
                             <constraint firstItem="jro-a1-UBq" firstAttribute="centerX" secondItem="xh5-ZG-Wes" secondAttribute="centerX" id="bao-nL-obR"/>
+                            <constraint firstAttribute="trailing" secondItem="QZr-qz-KRC" secondAttribute="trailing" constant="12" id="gaO-rd-k8B"/>
                             <constraint firstItem="jro-a1-UBq" firstAttribute="centerY" secondItem="xh5-ZG-Wes" secondAttribute="centerY" id="oQ9-cg-Fz9"/>
+                            <constraint firstItem="QZr-qz-KRC" firstAttribute="leading" secondItem="xh5-ZG-Wes" secondAttribute="leading" constant="12" id="rqu-UL-cTD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bSW-3Y-mkc"/>
                     </view>
@@ -64,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="352.80000000000001" y="222.63868065967017"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HBONOW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="HBONOW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,6 +299,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="80t-le-znZ" id="tO7-QU-dwg"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UcG-Eo-niK">
                                         <rect key="frame" x="0.0" y="50" width="345" height="50"/>
@@ -299,6 +314,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="80t-le-znZ" id="O3d-gR-XMM"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -395,6 +413,9 @@
                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="80t-le-znZ" id="EC2-wj-QN4"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alredy have an HBO NOW account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-bi-ypg">
                                 <rect key="frame" x="16" y="620" width="186" height="13.5"/>

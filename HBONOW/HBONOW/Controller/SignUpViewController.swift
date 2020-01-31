@@ -11,7 +11,7 @@ import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 //signUp
-class SignUpViewController: UIViewController {
+class SignUpViewController: TransitionViewController {
     
     @IBOutlet weak var fNameTxt: UITextField!
     @IBOutlet weak var LNametxt: UITextField!
@@ -63,6 +63,8 @@ class SignUpViewController: UIViewController {
     }
     func setUpElements() {
         errorLabel.alpha = 0
+        
+        
     }
     
     //check the fields and validate that the data is correct. If evrything is correct, this method return nil. othervise it returns the error messase.
@@ -133,8 +135,9 @@ class SignUpViewController: UIViewController {
                             self.showError("error saving user data")
                         }
                     }
-                    //trnssition to the home
+
                     self.transitionToHome()
+                    
                     
                     
                     
@@ -148,13 +151,37 @@ class SignUpViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    func transitionToHome()  {
-        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
+    
+    
+    func movetextField(textField: UITextField, moveDistance: Int, up: Bool)  {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
         
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+       
         
-        view.window?.rootViewController = homeViewController
-        
-        view.window?.makeKeyAndVisible() 
     }
+    
+    
+    
+    //Keyboard shows
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        movetextField(textField: textField, moveDistance: 250, up: true)
+    }
+    
+    //keyboard hidden
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+         movetextField(textField: textField, moveDistance: 250, up: false)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 

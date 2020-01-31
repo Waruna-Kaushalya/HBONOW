@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		88072F1F23C3B6E3007519E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88072F1E23C3B6E3007519E2 /* AppDelegate.swift */; };
-		88072F2123C3B6E3007519E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88072F2023C3B6E3007519E2 /* ViewController.swift */; };
+		88072F2123C3B6E3007519E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88072F2023C3B6E3007519E2 /* LoginViewController.swift */; };
 		88072F2423C3B6E3007519E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88072F2223C3B6E3007519E2 /* Main.storyboard */; };
 		88072F2723C3B6E3007519E2 /* HBONOW.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88072F2523C3B6E3007519E2 /* HBONOW.xcdatamodeld */; };
 		88072F2923C3B6E6007519E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88072F2823C3B6E6007519E2 /* Assets.xcassets */; };
 		88072F2C23C3B6E6007519E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88072F2A23C3B6E6007519E2 /* LaunchScreen.storyboard */; };
-		88D9EE1223CC5F4800CB2530 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE1123CC5F4800CB2530 /* SignUp.swift */; };
+		88D9EE1223CC5F4800CB2530 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D9EE1123CC5F4800CB2530 /* SignUpViewController.swift */; };
 		9AE2FCEC34C528DB3903C1EB /* Pods_HBONOW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384272D1A994E0C671275A59 /* Pods_HBONOW.framework */; };
 		C0030E2F23E15635005DDEBD /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E2E23E15635005DDEBD /* VideoCell.swift */; };
 		C0030E3123E15AA6005DDEBD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3023E15AA6005DDEBD /* Video.swift */; };
-		C0030E3323E3CEBD005DDEBD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3223E3CEBD005DDEBD /* Utilities.swift */; };
+		C0030E3923E41FBE005DDEBD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3823E41F81005DDEBD /* Utilities.swift */; };
+		C0030E3B23E4492C005DDEBD /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3A23E4492C005DDEBD /* TransitionViewController.swift */; };
 		C009BC0C23DF032F00E190B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C009BC0B23DF032F00E190B1 /* Constants.swift */; };
 		C0E190A023DE86D20020AAF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */; };
 		C0E190A423DEA52F0020AAF1 /* FirstHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */; };
@@ -29,16 +30,17 @@
 		73C853517173BB0DCF8928C2 /* Pods-HBONOW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBONOW.debug.xcconfig"; path = "Target Support Files/Pods-HBONOW/Pods-HBONOW.debug.xcconfig"; sourceTree = "<group>"; };
 		88072F1B23C3B6E3007519E2 /* HBONOW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBONOW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88072F1E23C3B6E3007519E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88072F2023C3B6E3007519E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		88072F2023C3B6E3007519E2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88072F2323C3B6E3007519E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88072F2623C3B6E3007519E2 /* HBONOW.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HBONOW.xcdatamodel; sourceTree = "<group>"; };
 		88072F2823C3B6E6007519E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88072F2B23C3B6E6007519E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88072F2D23C3B6E6007519E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88D9EE1123CC5F4800CB2530 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		88D9EE1123CC5F4800CB2530 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C0030E2E23E15635005DDEBD /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		C0030E3023E15AA6005DDEBD /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		C0030E3223E3CEBD005DDEBD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../../../../../Downloads/CustomLoginDemo/CustomLoginDemo/Helpers/Utilities.swift; sourceTree = "<group>"; };
+		C0030E3823E41F81005DDEBD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C0030E3A23E4492C005DDEBD /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		C009BC0B23DF032F00E190B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstHomeViewController.swift; sourceTree = "<group>"; };
@@ -82,12 +84,24 @@
 				C0E1909923DD6C1E0020AAF1 /* Model */,
 				C0E1909723DD6BCD0020AAF1 /* View */,
 				C0E1909823DD6BE50020AAF1 /* Controller */,
-				88072F2D23C3B6E6007519E2 /* Info.plist */,
+				C0030E3723E41F7C005DDEBD /* SupportFile */,
 				C0E190A523DEB3BA0020AAF1 /* GoogleService-Info.plist */,
-				C0030E3223E3CEBD005DDEBD /* Utilities.swift */,
+				88072F2D23C3B6E6007519E2 /* Info.plist */,
+				88072F2823C3B6E6007519E2 /* Assets.xcassets */,
 				88072F2523C3B6E3007519E2 /* HBONOW.xcdatamodeld */,
 			);
 			path = HBONOW;
+			sourceTree = "<group>";
+		};
+		C0030E3723E41F7C005DDEBD /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				88072F1E23C3B6E3007519E2 /* AppDelegate.swift */,
+				C009BC0B23DF032F00E190B1 /* Constants.swift */,
+				C0030E3823E41F81005DDEBD /* Utilities.swift */,
+			);
+			name = SupportFile;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C0E1909723DD6BCD0020AAF1 /* View */ = {
@@ -95,7 +109,6 @@
 			children = (
 				88072F2A23C3B6E6007519E2 /* LaunchScreen.storyboard */,
 				88072F2223C3B6E3007519E2 /* Main.storyboard */,
-				88072F2823C3B6E6007519E2 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,14 +116,13 @@
 		C0E1909823DD6BE50020AAF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				88D9EE1123CC5F4800CB2530 /* SignUp.swift */,
-				C009BC0B23DF032F00E190B1 /* Constants.swift */,
-				88072F1E23C3B6E3007519E2 /* AppDelegate.swift */,
+				88D9EE1123CC5F4800CB2530 /* SignUpViewController.swift */,
 				C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */,
-				C0030E2E23E15635005DDEBD /* VideoCell.swift */,
-				88072F2023C3B6E3007519E2 /* ViewController.swift */,
+				88072F2023C3B6E3007519E2 /* LoginViewController.swift */,
 				C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */,
+				C0030E3A23E4492C005DDEBD /* TransitionViewController.swift */,
 				C0030E3023E15AA6005DDEBD /* Video.swift */,
+				C0030E2E23E15635005DDEBD /* VideoCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,15 +267,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88D9EE1223CC5F4800CB2530 /* SignUp.swift in Sources */,
-				88072F2123C3B6E3007519E2 /* ViewController.swift in Sources */,
+				88D9EE1223CC5F4800CB2530 /* SignUpViewController.swift in Sources */,
+				88072F2123C3B6E3007519E2 /* LoginViewController.swift in Sources */,
 				C0E190A423DEA52F0020AAF1 /* FirstHomeViewController.swift in Sources */,
 				C0030E2F23E15635005DDEBD /* VideoCell.swift in Sources */,
 				88072F1F23C3B6E3007519E2 /* AppDelegate.swift in Sources */,
+				C0030E3B23E4492C005DDEBD /* TransitionViewController.swift in Sources */,
 				C0E190A023DE86D20020AAF1 /* HomeViewController.swift in Sources */,
 				88072F2723C3B6E3007519E2 /* HBONOW.xcdatamodeld in Sources */,
 				C009BC0C23DF032F00E190B1 /* Constants.swift in Sources */,
-				C0030E3323E3CEBD005DDEBD /* Utilities.swift in Sources */,
+				C0030E3923E41FBE005DDEBD /* Utilities.swift in Sources */,
 				C0030E3123E15AA6005DDEBD /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

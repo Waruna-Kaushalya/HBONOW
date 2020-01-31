@@ -15,7 +15,7 @@ import FirebaseFirestore
 
 
 //Hbo now
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
