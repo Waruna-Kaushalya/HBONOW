@@ -12,11 +12,11 @@ import Firebase
 import FirebaseFirestore
 
 
-let EMPTY_FIELDS = "Please Fill All Field"
+var EMPTY_FIELDS = "Please Fill All Field"
 let PASSWRD_DOSENT_MATCH = "Password doesn't match"
 let WEAK_PASSWORD = "Please make sure your password is at least 8 char, special chr and number"
 let USER_ERROR = "Error creating user"
-let ERROR_SAVING_DATA = "Error saving user data"
+var ERROR_SAVING_DATA = "Error saving user data"
 
 class SignUpViewController: UIViewController {
     
@@ -32,41 +32,41 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var hboTxt: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
-
+    
     
     override func viewDidLoad() {
         
-//        let alertMSG = AlertMessage()
+        //        let alertMSG = AlertMessage()
         
-        fNameTxt.layer.cornerRadius = 9.0
-        fNameTxt.clipsToBounds = true
-        fNameTxt.layer.maskedCorners = [.layerMinXMinYCorner]
+        //        fNameTxt.layer.cornerRadius = 9.0
+        //        fNameTxt.clipsToBounds = true
+        //        fNameTxt.layer.maskedCorners = [.layerMinXMinYCorner]
+        //
+        //        LNametxt.layer.cornerRadius = 9.0
+        //        LNametxt.clipsToBounds = true
+        //        LNametxt.layer.maskedCorners = [.layerMaxXMinYCorner]
+        //
+        //        emailAddTxt.layer.cornerRadius = 9.0
+        //        emailAddTxt.clipsToBounds = true
+        //        emailAddTxt.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        //
+        //        passwordTxt.layer.cornerRadius = 9.0
+        //        passwordTxt.clipsToBounds = true
+        //        passwordTxt.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        //
+        //        cPasswordTxt.layer.cornerRadius = 9.0
+        //        cPasswordTxt.clipsToBounds = true
+        //        cPasswordTxt.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        //
+        //        zipTxt.layer.cornerRadius = 9.0
+        //        zipTxt.clipsToBounds = true
+        //        zipTxt.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
+        //
+        //        hboTxt.layer.cornerRadius = 9.0
+        //        hboTxt.clipsToBounds = true
+        //        hboTxt.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         
-        LNametxt.layer.cornerRadius = 9.0
-        LNametxt.clipsToBounds = true
-        LNametxt.layer.maskedCorners = [.layerMaxXMinYCorner]
         
-        emailAddTxt.layer.cornerRadius = 9.0
-        emailAddTxt.clipsToBounds = true
-        emailAddTxt.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
-        passwordTxt.layer.cornerRadius = 9.0
-        passwordTxt.clipsToBounds = true
-        passwordTxt.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
-        cPasswordTxt.layer.cornerRadius = 9.0
-        cPasswordTxt.clipsToBounds = true
-        cPasswordTxt.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
-        zipTxt.layer.cornerRadius = 9.0
-        zipTxt.clipsToBounds = true
-        zipTxt.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
-        
-        hboTxt.layer.cornerRadius = 9.0
-        hboTxt.clipsToBounds = true
-        hboTxt.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
-        
-
         super.viewDidLoad()
         setUpElements()
         
@@ -83,44 +83,34 @@ class SignUpViewController: UIViewController {
         
         //check that all fields are field in
         
-        
         if fNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || LNametxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailAddTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cPasswordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || zipTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  {
             
-            
-
             alertMSG.alertMessage(_AlertMessage: EMPTY_FIELDS, _viewCFrom: self)
-//            return "Please fill ll the fields"
+            return EMPTY_FIELDS
             
         }
         if passwordTxt.text != cPasswordTxt.text {
-
-           alertMSG.alertMessage(_AlertMessage: PASSWRD_DOSENT_MATCH, _viewCFrom: self)
-//            return "Psword not mached"
+            
+            alertMSG.alertMessage(_AlertMessage: PASSWRD_DOSENT_MATCH, _viewCFrom: self)
+            return PASSWRD_DOSENT_MATCH
         }
-        
-        
         //heck if the password is secure
         
         let cleanePassword = passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if PasswordUtilities.isPasswordValid(cleanePassword) == false {
             alertMSG.alertMessage(_AlertMessage: WEAK_PASSWORD, _viewCFrom: self)
-//            return "Please make sure your password is at least 8 char, special chr and number"
+            return WEAK_PASSWORD
         }
-        
-        
         return nil
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
         
-        
-        
-        
         let error = validateFields()
         
         if error != nil{
-            showError(error!)
+            alertMSG.alertMessage(_AlertMessage: error!, _viewCFrom: self)
             
         }else{
             //create cleand version of user
@@ -144,28 +134,37 @@ class SignUpViewController: UIViewController {
                 if err != nil {
                     //there was error creating the user
                     self.alertMSG.alertMessage(_AlertMessage: USER_ERROR, _viewCFrom: self)
-//                    self.showError("Error creating user")
+                    //                    self.showError("Error creating user")
                     
                 }else{
                     //user was created sucessfully. now store the details
-                    let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["firstname" : firstName, "lastname" : lastName, "uid":result!.user.uid, "email": email, "zip": zip]) { (error) in
-                        if error != nil {
-//                              self.alertMSG.alertMessage(_AlertMessage: "error saving user data")
-                             self.alertMSG.alertMessage(_AlertMessage: ERROR_SAVING_DATA, _viewCFrom: self)
-//                            self.showError("error saving user data")
-                        }
-                    }
-                    //transition to home
-
-                    self.transHome.transHome(_viewCIdentifire: "HomeVC", _viewCFrom: self)
+                    
+                    self.pushDataToFireBase(_email: email, _UID: result!.user.uid, _firstName: firstName, _lastName: lastName, _zip: zip)
+                    
+                    self.transHome.transHome(_viewCIdentifire: "LoginVC", _viewCFrom: self)
                     
                 }
             }
         }
         
     }
+    
+    
+    
+    func pushDataToFireBase(_email:String, _UID:String,_firstName:String, _lastName:String, _zip:String )  {
+        let db = Firestore.firestore()
+        db.collection("users").addDocument(data: ["firstname" : _firstName, "lastname" : _lastName, "uid":_UID, "email": _email, "zip": _zip]) { (error) in
+            if error != nil {
+                //                              self.alertMSG.alertMessage(_AlertMessage: "error saving user data")
+                self.alertMSG.alertMessage(_AlertMessage: ERROR_SAVING_DATA, _viewCFrom: self)
+                //                            self.showError("error saving user data")
+                //                return "Error saving user data"
+            }
+        }
+        
+    }
+    
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
@@ -182,10 +181,7 @@ class SignUpViewController: UIViewController {
         self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
         UIView.commitAnimations()
         
-        
     }
-    
-    
     
     //Keyboard shows
     func textFieldDidEndEditing(_ textField: UITextField) {

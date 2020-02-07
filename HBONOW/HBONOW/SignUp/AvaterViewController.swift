@@ -7,19 +7,26 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
+import FirebaseStorage
 
+import FirebaseAuth
+import Firebase
 class AvaterViewController: UIViewController {
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     
     
     var image: UIImage? = nil
-
+    
     @IBOutlet weak var avater: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      setupAvater()
+        
+        setupAvater()
     }
     
     func setupAvater(){
@@ -39,6 +46,10 @@ class AvaterViewController: UIViewController {
     }
     @IBAction func tapedButton(_ sender: Any) {
         
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         guard let imageSelected  = self.image else{
             print("Avter is nil")
             return
@@ -46,9 +57,56 @@ class AvaterViewController: UIViewController {
         guard  let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
             return
         }
+        
+        
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+            
+            if err != nil {
+                
+                
+            }else{
+                //user was created sucessfully. now store the details
+                
+                
+                //
+                var imageURL: String?
+
+                let storageRef = Storage.storage().reference(forURL: "gs://customlogindemo-ce644.appspot.com")
+                let storageProfileRef = storageRef.child("profile").child(result!.user.uid)
+                
+                let metaData = StorageMetadata()
+                metaData.contentType = "image/jpg"
+                storageProfileRef.putData(imageData, metadata: metaData, completion: { (storageMetaData, error) in
+                    if error != nil{
+                        print("Errrror")
+                        return
+                    }
+                    
+                    //Read image url
+                    storageProfileRef.downloadURL(completion: { (url, error) in
+                        if let metaImageUrl = url?.absoluteString{
+                            print(metaImageUrl)
+                            
+                            self.pushDataToFireBase(_email: email, _imageU: metaImageUrl, _UID: result!.user.uid)
+                            
+                        }
+                    })
+                })
+            }
+        }
+        
+    }
+    func pushDataToFireBase(_email:String, _imageU:String, _UID:String ) {
+        let db = Firestore.firestore()
+        db.collection("users").addDocument(data: ["uid":_UID,"profileImageURL":_imageU,  "email": _email  ]) { (error) in
+            if error != nil {
+                
+            }
+            
+        }
     }
     
-   
 }
 
 extension AvaterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
