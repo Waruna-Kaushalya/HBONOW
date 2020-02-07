@@ -10,8 +10,18 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseFirestore
-//signUp
-class SignUpViewController: TransitionViewController {
+
+
+let EMPTY_FIELDS = "Please Fill All Field"
+let PASSWRD_DOSENT_MATCH = "Password doesn't match"
+let WEAK_PASSWORD = "Please make sure your password is at least 8 char, special chr and number"
+let USER_ERROR = "Error creating user"
+let ERROR_SAVING_DATA = "Error saving user data"
+
+class SignUpViewController: UIViewController {
+    
+    let alertMSG = AlertMessage()
+    let transHome = TransitionVC()
     
     @IBOutlet weak var fNameTxt: UITextField!
     @IBOutlet weak var LNametxt: UITextField!
@@ -22,7 +32,11 @@ class SignUpViewController: TransitionViewController {
     @IBOutlet weak var hboTxt: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+
+    
     override func viewDidLoad() {
+        
+//        let alertMSG = AlertMessage()
         
         fNameTxt.layer.cornerRadius = 9.0
         fNameTxt.clipsToBounds = true
@@ -52,10 +66,7 @@ class SignUpViewController: TransitionViewController {
         hboTxt.clipsToBounds = true
         hboTxt.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         
-        
-        
-        
-        
+
         super.viewDidLoad()
         setUpElements()
         
@@ -71,16 +82,21 @@ class SignUpViewController: TransitionViewController {
     func validateFields() -> String? {
         
         //check that all fields are field in
+        
+        
         if fNameTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || LNametxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailAddTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cPasswordTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || zipTxt.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""  {
             
             
+
+            alertMSG.alertMessage(_AlertMessage: EMPTY_FIELDS, _viewCFrom: self)
+//            return "Please fill ll the fields"
             
-            return "Please fill ll the fields"
         }
         if passwordTxt.text != cPasswordTxt.text {
-            return "Psword not mached"
+
+           alertMSG.alertMessage(_AlertMessage: PASSWRD_DOSENT_MATCH, _viewCFrom: self)
+//            return "Psword not mached"
         }
-        
         
         
         //heck if the password is secure
@@ -88,8 +104,8 @@ class SignUpViewController: TransitionViewController {
         let cleanePassword = passwordTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if PasswordUtilities.isPasswordValid(cleanePassword) == false {
-            //password secure enough
-            return "Please make sure your password is at least 8 char, special chr and number"
+            alertMSG.alertMessage(_AlertMessage: WEAK_PASSWORD, _viewCFrom: self)
+//            return "Please make sure your password is at least 8 char, special chr and number"
         }
         
         
@@ -97,6 +113,10 @@ class SignUpViewController: TransitionViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
+        
+        
+        
+        
         let error = validateFields()
         
         if error != nil{
@@ -117,14 +137,14 @@ class SignUpViewController: TransitionViewController {
             let zip = zipTxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             
-            
             //Create the user
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
                 if err != nil {
                     //there was error creating the user
-                    self.showError("Error creating user")
+                    self.alertMSG.alertMessage(_AlertMessage: USER_ERROR, _viewCFrom: self)
+//                    self.showError("Error creating user")
                     
                 }else{
                     //user was created sucessfully. now store the details
@@ -132,15 +152,14 @@ class SignUpViewController: TransitionViewController {
                     
                     db.collection("users").addDocument(data: ["firstname" : firstName, "lastname" : lastName, "uid":result!.user.uid, "email": email, "zip": zip]) { (error) in
                         if error != nil {
-                            self.showError("error saving user data")
+//                              self.alertMSG.alertMessage(_AlertMessage: "error saving user data")
+                             self.alertMSG.alertMessage(_AlertMessage: ERROR_SAVING_DATA, _viewCFrom: self)
+//                            self.showError("error saving user data")
                         }
                     }
+                    //transition to home
 
-                    self.transitionToHome()
-                    
-                    
-                    
-                    
+                    self.transHome.transHome(_viewCIdentifire: "HomeVC", _viewCFrom: self)
                     
                 }
             }
@@ -162,7 +181,7 @@ class SignUpViewController: TransitionViewController {
         UIView.setAnimationDuration(moveDuration)
         self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
         UIView.commitAnimations()
-       
+        
         
     }
     
@@ -175,7 +194,7 @@ class SignUpViewController: TransitionViewController {
     
     //keyboard hidden
     func textFieldDidBeginEditing(_ textField: UITextField) {
-         movetextField(textField: textField, moveDistance: 250, up: false)
+        movetextField(textField: textField, moveDistance: 250, up: false)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

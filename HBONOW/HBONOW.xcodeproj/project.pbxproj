@@ -18,8 +18,14 @@
 		C0030E2F23E15635005DDEBD /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E2E23E15635005DDEBD /* VideoCell.swift */; };
 		C0030E3123E15AA6005DDEBD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3023E15AA6005DDEBD /* Video.swift */; };
 		C0030E3923E41FBE005DDEBD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3823E41F81005DDEBD /* Utilities.swift */; };
-		C0030E3B23E4492C005DDEBD /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0030E3A23E4492C005DDEBD /* TransitionViewController.swift */; };
-		C009BC0C23DF032F00E190B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C009BC0B23DF032F00E190B1 /* Constants.swift */; };
+		C02EEC0423EC2FDD004F11F5 /* TouchIDFaceIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02EEC0323EC2FDD004F11F5 /* TouchIDFaceIDAuthentication.swift */; };
+		C02EEC0623EC3CB0004F11F5 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02EEC0523EC3CB0004F11F5 /* TestStoryboard.storyboard */; };
+		C02EEC0823EC7246004F11F5 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02EEC0723EC7246004F11F5 /* ResetPasswordViewController.swift */; };
+		C02EEC0A23ECFB9D004F11F5 /* AvaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02EEC0923ECFB9D004F11F5 /* AvaterViewController.swift */; };
+		C0B7EFF323EABA1E00A891D7 /* TransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7EFF223EABA1E00A891D7 /* TransitionVC.swift */; };
+		C0B7EFF523EAC0D000A891D7 /* ValidateFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7EFF423EAC0D000A891D7 /* ValidateFields.swift */; };
+		C0B7EFFA23EAD9F800A891D7 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7EFF923EAD9F800A891D7 /* AlertMessage.swift */; };
+		C0B7EFFC23EBD79500A891D7 /* CheckPasswordAndEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7EFFB23EBD79500A891D7 /* CheckPasswordAndEmail.swift */; };
 		C0E190A023DE86D20020AAF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */; };
 		C0E190A423DEA52F0020AAF1 /* FirstHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */; };
 		C0E190A623DEB3BA0020AAF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0E190A523DEB3BA0020AAF1 /* GoogleService-Info.plist */; };
@@ -40,8 +46,14 @@
 		C0030E2E23E15635005DDEBD /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		C0030E3023E15AA6005DDEBD /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C0030E3823E41F81005DDEBD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		C0030E3A23E4492C005DDEBD /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
-		C009BC0B23DF032F00E190B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C02EEC0323EC2FDD004F11F5 /* TouchIDFaceIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDFaceIDAuthentication.swift; sourceTree = "<group>"; };
+		C02EEC0523EC3CB0004F11F5 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
+		C02EEC0723EC7246004F11F5 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		C02EEC0923ECFB9D004F11F5 /* AvaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaterViewController.swift; sourceTree = "<group>"; };
+		C0B7EFF223EABA1E00A891D7 /* TransitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionVC.swift; sourceTree = "<group>"; };
+		C0B7EFF423EAC0D000A891D7 /* ValidateFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFields.swift; sourceTree = "<group>"; };
+		C0B7EFF923EAD9F800A891D7 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		C0B7EFFB23EBD79500A891D7 /* CheckPasswordAndEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPasswordAndEmail.swift; sourceTree = "<group>"; };
 		C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstHomeViewController.swift; sourceTree = "<group>"; };
 		C0E190A523DEB3BA0020AAF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -83,6 +95,9 @@
 			children = (
 				C0E1909923DD6C1E0020AAF1 /* Model */,
 				C0E1909723DD6BCD0020AAF1 /* View */,
+				C0B7EFF723EAD2B200A891D7 /* SignUp */,
+				C0B7EFFD23EC1A7B00A891D7 /* Transition */,
+				C0B7EFF823EAD9A900A891D7 /* Alerts */,
 				C0E1909823DD6BE50020AAF1 /* Controller */,
 				C0030E3723E41F7C005DDEBD /* SupportFile */,
 				C0E190A523DEB3BA0020AAF1 /* GoogleService-Info.plist */,
@@ -97,11 +112,39 @@
 			isa = PBXGroup;
 			children = (
 				88072F1E23C3B6E3007519E2 /* AppDelegate.swift */,
-				C009BC0B23DF032F00E190B1 /* Constants.swift */,
 				C0030E3823E41F81005DDEBD /* Utilities.swift */,
 			);
 			name = SupportFile;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C0B7EFF723EAD2B200A891D7 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				88072F2023C3B6E3007519E2 /* LoginViewController.swift */,
+				C02EEC0923ECFB9D004F11F5 /* AvaterViewController.swift */,
+				C02EEC0723EC7246004F11F5 /* ResetPasswordViewController.swift */,
+				88D9EE1123CC5F4800CB2530 /* SignUpViewController.swift */,
+				C0B7EFFB23EBD79500A891D7 /* CheckPasswordAndEmail.swift */,
+				C02EEC0323EC2FDD004F11F5 /* TouchIDFaceIDAuthentication.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C0B7EFF823EAD9A900A891D7 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				C0B7EFF923EAD9F800A891D7 /* AlertMessage.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		C0B7EFFD23EC1A7B00A891D7 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				C0B7EFF223EABA1E00A891D7 /* TransitionVC.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		C0E1909723DD6BCD0020AAF1 /* View */ = {
@@ -109,6 +152,7 @@
 			children = (
 				88072F2A23C3B6E6007519E2 /* LaunchScreen.storyboard */,
 				88072F2223C3B6E3007519E2 /* Main.storyboard */,
+				C02EEC0523EC3CB0004F11F5 /* TestStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,13 +160,11 @@
 		C0E1909823DD6BE50020AAF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				88D9EE1123CC5F4800CB2530 /* SignUpViewController.swift */,
 				C0E190A323DEA52F0020AAF1 /* FirstHomeViewController.swift */,
-				88072F2023C3B6E3007519E2 /* LoginViewController.swift */,
 				C0E1909F23DE86D20020AAF1 /* HomeViewController.swift */,
-				C0030E3A23E4492C005DDEBD /* TransitionViewController.swift */,
 				C0030E3023E15AA6005DDEBD /* Video.swift */,
 				C0030E2E23E15635005DDEBD /* VideoCell.swift */,
+				C0B7EFF423EAC0D000A891D7 /* ValidateFields.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +257,7 @@
 				C0E190A623DEB3BA0020AAF1 /* GoogleService-Info.plist in Resources */,
 				88072F2923C3B6E6007519E2 /* Assets.xcassets in Resources */,
 				88072F2423C3B6E3007519E2 /* Main.storyboard in Resources */,
+				C02EEC0623EC3CB0004F11F5 /* TestStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,13 +314,18 @@
 				88072F2123C3B6E3007519E2 /* LoginViewController.swift in Sources */,
 				C0E190A423DEA52F0020AAF1 /* FirstHomeViewController.swift in Sources */,
 				C0030E2F23E15635005DDEBD /* VideoCell.swift in Sources */,
+				C0B7EFF323EABA1E00A891D7 /* TransitionVC.swift in Sources */,
+				C0B7EFF523EAC0D000A891D7 /* ValidateFields.swift in Sources */,
 				88072F1F23C3B6E3007519E2 /* AppDelegate.swift in Sources */,
-				C0030E3B23E4492C005DDEBD /* TransitionViewController.swift in Sources */,
+				C02EEC0A23ECFB9D004F11F5 /* AvaterViewController.swift in Sources */,
 				C0E190A023DE86D20020AAF1 /* HomeViewController.swift in Sources */,
 				88072F2723C3B6E3007519E2 /* HBONOW.xcdatamodeld in Sources */,
-				C009BC0C23DF032F00E190B1 /* Constants.swift in Sources */,
 				C0030E3923E41FBE005DDEBD /* Utilities.swift in Sources */,
+				C0B7EFFA23EAD9F800A891D7 /* AlertMessage.swift in Sources */,
 				C0030E3123E15AA6005DDEBD /* Video.swift in Sources */,
+				C02EEC0823EC7246004F11F5 /* ResetPasswordViewController.swift in Sources */,
+				C02EEC0423EC2FDD004F11F5 /* TouchIDFaceIDAuthentication.swift in Sources */,
+				C0B7EFFC23EBD79500A891D7 /* CheckPasswordAndEmail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
