@@ -71,7 +71,7 @@ class AvaterViewController: UIViewController {
                 
                 //
                 var imageURL: String?
-
+                
                 let storageRef = Storage.storage().reference(forURL: "gs://customlogindemo-ce644.appspot.com")
                 let storageProfileRef = storageRef.child("profile").child(result!.user.uid)
                 
